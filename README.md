@@ -1,6 +1,7 @@
-# Kafka Playground (CPU Usage Monotiring Case Study 👀️)
+## Kafka Playground (CPU Usage Monotiring Case Study 👀️)
 
-#### The project is a proof of concept that uses kafka alongside a java based clients. The project consists of three threads. The first one acts as a kafka producer that produces a key value pairs of the cpu usage reads as the values and the time of these reads as the keys. The second thread is a processor that consumes the messages produced by the previous thread and transforms it to the percentile format ,then publishes it to the sink topic. The last thread is a consumer that recives the transformed cpu usages and just prints it to the console.
+#### The project is a proof of concept that uses kafka alongside a java based clients.
+The project consists of three threads. The first one acts as a kafka producer that produces a key value pairs of the cpu usage reads as the values and the time of these reads as the keys. The second thread is a processor that consumes the messages produced by the previous thread and transforms it to the percentile format ,then publishes it to the sink topic. The last thread is a consumer that recives the transformed cpu usages and just prints it to the console.
 
 #### To run the project first you need to have kafka installed and running on :
 
@@ -16,7 +17,7 @@ docker run -p 9092:9092 -d --name kafka-kraft bashj79/kafka-kraft
 
 #### **Note** that this kafka image uses kafka kraft mode and installs a single instance cluster that runs without any zookeeper which is ***Awesome*** 🚀️🎉️🎉️
 
-#### After installing kafka , running the project with maven and intalling the dependncies you should see somthing like that in the console
+After installing kafka , running the project with maven and intalling the dependncies you should see somthing like that in the console
 
 ```
 produce to cpu-usage topic on partition number 0 with offset 595
